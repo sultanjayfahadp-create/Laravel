@@ -13,7 +13,7 @@ echo "=== Sultan's Amazing Simple Students CRUD ===\n\n";
 echo "1. CREATE Operation:\n";
 $student = Students::create([
     'name' => 'Alice Johnson',
-    'email' => 'alice@example.com'
+    'email' => 'alice@gmail.com'
 ]);
 echo "   Created student with ID: {$student->id}\n\n";
 
