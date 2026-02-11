@@ -6,3 +6,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user', function (Request $request) {
     return "hello";
 });
+
+
+Route::apiResource('students', StudentController::class);
