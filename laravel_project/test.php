@@ -12,20 +12,23 @@ echo "=== Sultan's Amazing Simple Students CRUD ===\n\n";
 // CREATE
 echo "1. CREATE Operation:\n";
 $student = Students::create([
-    'name' => 'Alice Johnson',
-    'email' => 'alice@gmail.com'
+    'name' => 'Jay Sultan',
+    'email' => 'Sultan@gmail.com',
+    'password' => 'xyz'
 ]);
-echo "   Created student with ID: {$student->id}\n\n";
+echo "   Created student with ID: {$student->id}\n";
 
 // READ
 echo "2. READ Operation:\n";
 $foundStudent = Students::find($student->id);
-echo "   Found: {$foundStudent->name} ({$foundStudent->email})\n\n";
+echo "   Found User: \n   ID: {$foundStudent->id} \n   Name: {$foundStudent->name} \n   email: {$foundStudent->email} \n   password: {$foundStudent->password}\n\n";
 
-// UPDATE
+/*UPDATE
 echo "3. UPDATE Operation:\n";
-$foundStudent->update(['name' => 'Alice Smith']);
-echo "   Updated name to: {$foundStudent->name}\n\n";
+$foundStudent->update(['name' => 'Millard Pajama', 'email' => 'albion@gmail.com']);
+echo "   Updated name to: \n   Name: {$foundStudent->name}\n   Email: {$foundStudent->email}\n\n";
+*/
+
 
 /* DELETE
 echo "4. DELETE Operation:\n";

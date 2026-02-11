@@ -1,16 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Student;
+use App\Models\Students;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class TableController extends Controller
 {
-    public function index()
+    public function getAllStudents()
     {
-        return Student::all();
+        $students = Students::all();
+        return response()->json([
+        'message' => 'All Students from Database',
+        'count' => $students->count(),
+        'data' => $students
+        ]);
     }
 
     public function store(Request $request)

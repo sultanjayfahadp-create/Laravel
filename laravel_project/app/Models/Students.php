@@ -11,7 +11,8 @@ class Students extends Model
 
     protected $fillable = [
         'name',
-        'email'
+        'email',
+        'password'
     ];
 
     public function getFormattedNameAttribute()
