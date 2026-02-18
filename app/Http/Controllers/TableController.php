@@ -6,9 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Students;
 use Illuminate\Http\Request;
 
+
 class TableController extends Controller
 {
-    public function getAllStudents()
+    public function getAllStudents(Request $request)
     {
         $students = Students::all();
         return response()->json([
